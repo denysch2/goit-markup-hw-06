@@ -30,11 +30,9 @@
  }
 button {
   cursor: pointer;
-  background-color: var(--accent--header--color--);
-  color: var(--footer--logo--);
-
   display: inline-block;
   vertical-align: middle;
+  background: transparent;
   font-size: 16px;
   line-height: 1.87;
   text-decoration: none;
@@ -300,8 +298,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cu
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     padding: 40px 39px 40px 41px;
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 4px;
@@ -315,22 +313,21 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cu
       height: 18px;
       transform: translate(-50%, -50%);
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      fill: #000000;
+      
   }
   
   
   .btn-close {
-      position: absolute;
-      top:8px;
-      right: 8px;
-      outline: none;
-      width: 30px;
-      height: 30px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 50%;
-      background-color: var(--footer--logo--);
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-.icon-close:hover, .icon-close:focus {
+.btn-close:hover, .btn-close:focus{
   fill: var(--accent--header--color--);
 }
   .modal-title {
@@ -376,9 +373,11 @@ margin-bottom: 10px;
 }
 .input-icon {
   position: absolute;
-  top: 50%;
-  left: 21px;
-  transform: translate(-50%, -50%);
+  top: 70%;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
   fill: currentColor;
 }
 
@@ -480,6 +479,8 @@ margin-bottom: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 200px;
   min-height: 50px;
+  background-color: var(--accent--header--color--);
+  color: var(--footer--logo--);
 }
 .cap-modal-page .button:hover, .button:focus {
   background-color: var(--cap--bgr--focus--);
@@ -735,6 +736,7 @@ border-radius: 0px 0px 4px 4px;
      .footer-icon {
       margin-left: auto;
       color: var(--footer--logo--);
+      margin-right: 93px;
      }
   .footer-join {
       display: inline-block;
@@ -749,7 +751,7 @@ border-radius: 0px 0px 4px 4px;
 
   .footer-icon-list {
       display: flex;
-      margin-right: 93px;
+      
   }
   .footer-icon-list .item + .item {
       margin-left: 10px;
@@ -817,6 +819,8 @@ padding-left: 29px;
 padding-right: 28px;
 overflow: hidden;
 border: 0em;
+background-color: var(--accent--header--color--);
+color: var(--footer--logo--);
 }
 .icon-send {
 position: absolute;
